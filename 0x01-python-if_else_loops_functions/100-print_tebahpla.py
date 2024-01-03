@@ -1,6 +1,5 @@
 #!/usr/bin/python3
+i = 0
 for letter in range(ord("z"), ord("a")-1, -1):
-    if letter % 2 == 0:
-        print(chr(letter), end="")
-    else:
-        print(chr(letter).upper(), end="")
+    print("{}".format(chr(letter - i)), end="")
+    i == 32 if i == 0 else 0
