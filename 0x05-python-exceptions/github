@@ -1,0 +1,4 @@
+#!/bin/bash
+add .
+git commit -m "exceptions"
+git push
