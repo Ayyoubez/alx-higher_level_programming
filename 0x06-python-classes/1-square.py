@@ -9,7 +9,6 @@ class Square:
         """ constructor
 
         args:
-            size: length of the square side
+            size (int): length of the square side
         """
-
         self.__size = size
