@@ -17,6 +17,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_jason(self):
+    def to_json(self):
         """ dict representaion """
         return self.__dict__
