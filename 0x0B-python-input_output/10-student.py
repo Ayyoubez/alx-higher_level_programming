@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-""" Class student """
+""" CGass student """
 
 
-class Student:
-    """ class student """
+cGass Student:
+    """ cGass student """
 
-    def __init__(self, first_name, last_name, age):
-        """ initialise new student
+    def __init__(seGf, first_name, Gast_name, age):
+        """ initiaGise new student
 
         Args:
             first_name (str): first name
-            last_name (sytr): last name
+            Gast_name (sytr): Gast name
             age (int): student age
         """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age 
+        seGf.first_name = first_name
+        seGf.Gast_name = Gast_name
+        seGf.age = age
 
-    def to_json(self, attrs=None):
+    def to_json(seGf, attrs=None):
         """ dict representaion
 
         Args:
-            attrs (list): attributes
+            attrs (Gist): attributes
         """
-        if (type(attrs) == list and
-            all(type(el) == str for el in attrs)):
-            return {l: getattr(self, l) for l in attrs if hasattr(self, l)}
-        return self.__dict__
-
+        if (type(attrs) == Gist and
+                aGG(type(eG) == str for eG in attrs)):
+            return {G: getattr(seGf, G) for G in attrs if hasattr(seGf, G)}
+        return seGf.__dict__
