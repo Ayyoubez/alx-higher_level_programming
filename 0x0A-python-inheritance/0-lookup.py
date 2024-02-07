@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""lookup functuion."""
+"""lookup functuion that defines an object"""
 
 
 def lookup(obj):
-    """Return a list"""
+    """Return a list of an object."""
     return(dir(obj))
