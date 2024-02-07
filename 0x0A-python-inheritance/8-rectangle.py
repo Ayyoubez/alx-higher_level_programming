@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ Rectangle inherits from Bsegeometry"""
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """ rectangle inherit BaseGeo"""
 
-    def __init(self, width, height):
+    def __init__(self, width, height):
         """ initialisation
 
         Args:
