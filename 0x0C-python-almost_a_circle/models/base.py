@@ -8,7 +8,11 @@ from turtle import Turtle
 class Base:
     """ definition class base
 
-    The base class for all other classes in the project"""
+    The base class for all other classes in the project
+
+    Private class Attribute:
+        __nb_objects (int): number of objects
+    """
 
     __nb_objects = 0
 
@@ -20,8 +24,9 @@ class Base:
         """
         if id is not None:
             self.id = id
-        Base.__nb_objects += 1
-        self.id = Base.__nb_objects
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
