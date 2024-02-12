@@ -79,8 +79,29 @@ class TestBase_inst(unittest.TestCase):
         self.asserEqual((1, 2, 3), Base((1, 2, 3)).id)
 
     def test_set_it(self):
-        self.asserEqual({1, 2, 3} Base({1, 2, 3}.id)
+        self.asserEqual({1, 2, 3} Base({1, 2, 3}.id))
 
+    def test_frozenset_id(self):
+        self.asserEqual(frozenset({1, 2, 3}), Base(frozenset({1, 2, 3})).id)
 
+    def test_range(self):
+        self.assertEqual(range(5), Base(range(5)).id)
 
+    def test_bytes(self):
+        self.assertEqual(b'Python', Base(b'Python').id)
 
+    def test_bytearray(self):
+        self.assertEqual(bytearray(b'qwerty'), Base(bytearray(b'qwerty')).id)
+
+    def test_memory(self):
+        self.assertEqual(memoryview(b'qwerty'), Base(memoryview(b'qwerty')).id)
+
+    def test_inf(self):
+        self.assertEqual(float('inf'), Base(float('inf')).id)
+
+    def test_Nan(self):
+        self.assertEqual(float('nan'), Base(float('nan')).id)
+
+    def test_two_arg(self):
+        self.assertRaises(TypeError):
+            base(1, 2)
