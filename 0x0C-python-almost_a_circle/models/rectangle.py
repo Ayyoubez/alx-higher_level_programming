@@ -40,7 +40,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-        @property
+    @property
     def height(self):
         """ setter and getter for height attr"""
         return self.__height
@@ -84,7 +84,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """ print ractangle usuing #"""
+        """ print rectangle usuing #"""
         if self.width == 0 or self.height == 0:
             print("")
             return
