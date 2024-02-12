@@ -44,3 +44,63 @@ class TestRectangle_inst(unittest.TestCase):
         with self.assertRaises(AttributeError):
             Rectangle(1, 2, 3, 4, 5, 6)
 
+    def test_private_width(self):
+        with self.assertRaises(AttributeError):
+            print(Rectangle(10, 10, 0, 0, 1).__width)
+
+    def test_private_height(self):
+        with self.assertRaises(AttributeError):
+            print(Rectangle(10, 10, 0, 0, 1).__height)
+
+    def test_private_x(self):
+        with self.assertRaises(AttributeError):
+            print(Rectangle(10, 10, 0, 0, 1).__x)
+
+    def test_private_y(self):
+        with self.assertRaises(AttributeError):
+            print(Rectangle(10, 10, 0, 0, 1).__y)
+
+    def test_get_width(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        self.assertEqual(5, rec.width)
+
+    def test_set_width(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        rec.width = 8
+        self.assertEqual(8, rec.width)
+
+    def test_get_height(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        self.assertEqual(8, rec.height)
+
+    def test_set_height(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        rec.height = 9
+        self.assertEqual(9, rec.height)
+
+    def test_get_x(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        self.assertEqual(0, rec.x)
+
+    def test_set_x(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        rec.x = 8
+        self.assertEqual(8, rec.x)
+
+    def test_get_y(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        self.assertEqual(0, rec.y)
+
+    def test_set_y(self):
+        rec = Rectangle(5, 8, 0, 0, 1)
+        rec.y = 8
+        self.assertEqual(8, rec.y)
+
+
+
+
+
+
+
+
+
