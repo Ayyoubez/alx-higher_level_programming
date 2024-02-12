@@ -2,7 +2,7 @@
 """ define a base class"""
 import json
 import csv
-import turtle
+from turtle import Turtle
 
 
 class Base:
@@ -123,3 +123,41 @@ class Base:
         except IOError:
             return []
 
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ draw rectangle and square using Turtle class
+
+        Args:
+            list_rectangles (list): a list of rectangle obects
+            list_square (list): a list of squares to draw
+        """
+        turtle = Turtle()
+        turtle.screen.bgcolor("#3498db ")
+        turtle.pensize(3)
+        turtle.shape("turtle")
+        turtle.color("green")
+        for draw in list_rectangles:
+            turtle.showturtle()
+            turtle.up()
+            turtle.goto(draw.x, draw.y)
+            turtle.down()
+            for i in range(2):
+                turtle.forward(draw.width)
+                turtle.left(90)
+                turtle.forward(draw.height)
+                turtle.left(90)
+            turtle.hideturtle()
+        turtle.color("white")
+        for draw in list_squares:
+            turtle.showturtle()
+            turtle.up()
+            turtle.goto(draw.x, draw.y)
+            turtle.down()
+            for i in range(2):
+                turtle.forward(draw.width)
+                turtle.left(90)
+                turtle.forward(draw.height)
+                turtle.left(90)
+            turtle.hideturtle()
+
+        turtle.exitonclick()
