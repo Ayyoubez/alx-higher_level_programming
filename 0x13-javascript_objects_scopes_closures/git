@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git add .
+git commit -m "JS scope and closures "
+git push
