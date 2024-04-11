@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-"""  lists all states from the database hbtn_0e_0_usa """
-
+"""  lists all states from the database hbtn_0e_0_usa with order """
 import MySQLdb
 from sys import argv
 
@@ -10,7 +8,7 @@ if __name__ == "__main__":
                                  password=argv[2], db=argv[3], port=3306)
     cursor = connection.cursor()
 
-    cursor.execute("SELECT * from states ORDER BY state.id ASC")
+    cursor.execute("SELECT * from states WHERE name LIKE 'N%' ORDER BY id ASC")
     data = cursor.fetchall()
 
     for row in data:
