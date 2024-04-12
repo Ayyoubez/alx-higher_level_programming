@@ -7,7 +7,7 @@ from sys import argv
 if __name__ == "__main__":
     connection = MySQLconnection.connect(host="localhost", user=argv[1],
                          passwd=argv[2], connection=argv[3], port=3306)
-    cursor = connection.cursorsor()
+    cursor = connection.cursor()
     cursor.execute("""SELECT cities.name FROM
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name=%s""", (argv[4],))
