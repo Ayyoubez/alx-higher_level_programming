@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
-"""  lists all states from the database hbtn_0e_0_usa with filter """
+"""lists all states from the database """
 import MySQLdb
 from sys import argv
+
 
 if __name__ == "__main__":
     connection = MySQLdb.connect(host="localhost", user=argv[1],
@@ -10,7 +10,6 @@ if __name__ == "__main__":
     cursor = connection.cursor()
     valid = argv[4]
     cursor.execute("SELECT * FROM states WHERE name LIKE %s", (valid, ))
-                .format(sys.argv[4]))
     data = cursor.fetchall()
 
     for row in data:
