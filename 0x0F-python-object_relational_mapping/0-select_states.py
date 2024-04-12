@@ -10,7 +10,7 @@ if __name__ == "__main__":
                                  password=argv[2], db=argv[3], port=3306)
     cursor = connection.cursor()
 
-    cursor.execute("SELECT * from states ORDER BY state.id ASC")
+    cursor.execute("SELECT * from states")
     data = cursor.fetchall()
 
     for row in data:
