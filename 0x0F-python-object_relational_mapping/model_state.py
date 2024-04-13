@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-""" state class and base instance """
+""" state class and base instance
+"""
 
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
