@@ -2,7 +2,7 @@
 
 """Lists all the states staring with letter a
 """
-
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sys import argv
 from sqlalchemy.orm import sessionmaker
