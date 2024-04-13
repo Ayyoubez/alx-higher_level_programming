@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-from SQLAlchemy import Column, Integer, String, MetaData
-from SQLAlchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy.ext.declarative import declarative_base
 
 myMeta = MetaData()
 
-Base = decarative_base(metadata=myMeta)
+Base = declarative_base(metadata=myMeta)
 
 
 class State(Base):
