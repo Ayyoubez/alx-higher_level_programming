@@ -1,6 +1,7 @@
 #!/usr/bin/pyuthon3
 
-"""adds the states louisiana to the database """
+"""adds the states louisiana to the database
+"""
 
 from sys import argv
 from sqlalchemy import create_engine
