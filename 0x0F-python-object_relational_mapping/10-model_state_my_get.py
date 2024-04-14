@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Prints the sate with name passed as an argument from the database 
+"""Prints the sate with name passed as an argument from the database
 """
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -18,4 +18,3 @@ if __name__ == "__main__":
         print(instance[0].id)
     except IndexError:
         print("Not found")
-
