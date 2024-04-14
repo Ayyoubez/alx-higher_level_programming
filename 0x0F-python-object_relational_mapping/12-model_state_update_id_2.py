@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """change the name of the state in the database
 """
-import sys
+from sys import argv
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
