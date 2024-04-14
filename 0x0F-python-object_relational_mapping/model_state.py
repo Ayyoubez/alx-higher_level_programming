@@ -11,7 +11,7 @@ Base = declarative_base(metadata=myMeta)
 
 class State(Base):
     """
-    Class State with id , name 
+    Class State with id , name
     """
     __tablename__ = 'states'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
