@@ -1,4 +1,4 @@
-#!/usr/bin/pyuthon3
+#!/usr/bin/python3
 """adds the states louisiana to the database
 """
 from sys import argv
